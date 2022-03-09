@@ -17,7 +17,7 @@ class CustomImageView @JvmOverloads constructor(
     companion object {
         private const val DEFAULT_BORDER_WIDTH = 2
         private const val DEFAULT_BORDER_COLOR = Color.WHITE
-        private const val DEFAULT_SIZE = 200
+        private const val DEFAULT_SIZE = 50
     }
 
     @Px

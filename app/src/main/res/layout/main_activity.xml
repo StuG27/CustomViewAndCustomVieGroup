@@ -4,16 +4,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <com.volynkin.customviewandviewgroup.CustomImageView
-        android:layout_width="wrap_content"
+    <com.volynkin.customviewandviewgroup.CustomViewGroup
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/avatar"
-        app:civ_borderColor="@color/white"
-        app:civ_borderWidth="8dp"
-        app:civ_initials="DV"
+        android:paddingHorizontal="20dp"
+        app:cvg_verticalOffset="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="@string/avatar1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/avatar2"/>
+
+    </com.volynkin.customviewandviewgroup.CustomViewGroup>
+
+    <com.volynkin.customviewandviewgroup.CustomImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/avatar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

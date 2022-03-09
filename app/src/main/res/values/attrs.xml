@@ -5,4 +5,7 @@
         <attr name="civ_borderWidth" format="dimension"/>
         <attr name="civ_initials" format="string"/>
     </declare-styleable>
+    <declare-styleable name="CustomViewGroup">
+        <attr name="cvg_verticalOffset" format="dimension"/>
+    </declare-styleable>
 </resources>

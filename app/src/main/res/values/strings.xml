@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CustomViewAndViewGroup</string>
+    <string name="avatar1">AVATAR_AVATAR_AVATAR</string>
+    <string name="avatar2">AVATAR</string>
 </resources>
