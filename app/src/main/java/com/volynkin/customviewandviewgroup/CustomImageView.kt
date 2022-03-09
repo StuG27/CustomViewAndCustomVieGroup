@@ -37,18 +37,20 @@ class CustomImageView @JvmOverloads constructor(
 
     init {
         if (attrs != null) {
-            val ta = context.obtainStyledAttributes(attrs, R.styleable.CustomImageView)
-            borderWidth = ta.getDimension(
+            val typedArray = context.obtainStyledAttributes(attrs, R.styleable.CustomImageView)
+            borderWidth = typedArray.getDimension(
                 R.styleable.CustomImageView_civ_borderWidth,
                 context.dpToPx(DEFAULT_BORDER_WIDTH)
             )
-            borderColor = ta.getColor(
+            borderColor = typedArray.getColor(
                 R.styleable.CustomImageView_civ_borderColor,
                 DEFAULT_BORDER_COLOR
             )
-            initials = ta.getNonResourceString(R.styleable.CustomImageView_civ_initials) ?: "??"
+            initials =
+                typedArray.getNonResourceString(R.styleable.CustomImageView_civ_initials) ?: "??"
             scaleType = ScaleType.CENTER_CROP
             setup()
+            typedArray.recycle()
         }
     }
 
@@ -72,8 +74,9 @@ class CustomImageView @JvmOverloads constructor(
     override fun onDraw(canvas: Canvas) {
         canvas.drawBitmap(resultBm, viewRect, viewRect, null)
         val half = (borderWidth / 2).toInt()
-        viewRect.inset(half,half)
+        viewRect.inset(half, half)
         canvas.drawOval(viewRect.toRectF(), borderPaint)
+        viewRect.inset(-half, -half)
     }
 
     private fun resolveDefaultSize(spec: Int): Int {

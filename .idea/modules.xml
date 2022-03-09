@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CustomViewAndCustomVieGroup.iml" filepath="$PROJECT_DIR$/.idea/CustomViewAndCustomVieGroup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CustomViewAndViewGroup.iml" filepath="$PROJECT_DIR$/.idea/modules/CustomViewAndViewGroup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CustomViewAndViewGroup.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CustomViewAndViewGroup.app.iml" />
     </modules>
   </component>
 </project>
